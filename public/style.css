@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei,
+    Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-variant: tabular-nums;
+  font-feature-settings: "tnum", "tnum";
+  transition: background 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.top-app-bar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 24px;
+  z-index: 4;
+  background: #fff;
+  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.05);
+}
+
+.top-app-bar__row {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+}
+
+.top-app-bar__section {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  z-index: 1;
+}
+
+.top-app-bar__section--align-start {
+  justify-content: flex-start;
+  order: -1;
+}
+
+.top-app-bar__section--align-end {
+  justify-content: flex-end;
+  order: 1;
+}
+
+.top-app-bar__section .menu-ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-app-bar__section .top-app-bar__action-item {
+  position: relative;
+  display: inline-block;
+  height: 64px;
+  min-width: 64px;
+  line-height: 64px;
+  text-align: center;
+  padding: 0 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.top-app-bar__section .top-app-bar__action-item.active {
+  color: #4569d4;
+}
+
+.top-app-bar__section .top-app-bar__action-item.active:after {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background-color: #4569d4;
+  border-radius: 1px;
+}
+
+.top-app-bar__section .top-app-bar__action-item svg {
+  padding: 16px 0;
+  fill: #111;
+}
+
+.layout-grid {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.main-content {
+  margin: 0 auto;
+  padding: 4rem 2rem 0;
+}
+
+.main-content .section {
+  position: relative;
+}
+
+.footer {
+  padding: 24px 0;
+  text-align: center;
+}
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 14px;
+}
+
+pre > code[class^="language"] {
+  display: block;
+  padding: 16px;
+  background-color: #f6f8fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: auto;
+}

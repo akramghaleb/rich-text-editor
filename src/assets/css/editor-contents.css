@@ -1,0 +1,615 @@
+/* All classes used must begin with "__meta__". */
+/* used color #000 , #fff , #CCC, #f9f9f9 */
+/* font color #333, background color: #fff */
+/* grey color #e1e1e1 , #d1d1d1 , #c1c1c1 , #b1b1b1 */
+/* blue color #c7deff , #80bdff , #3f9dff , #4592ff */
+/* red color #b94a48 , #f2dede , #eed3d7 */
+
+/* ExploreEditor contents */
+.meta-explore-editor-editable {
+  font-family: Helvetica Neue;
+  font-size: 13px;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.5;
+  word-break: normal;
+  word-wrap: break-word;
+  padding: 16px;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.meta-explore-editor-editable * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* RTL - editable */
+.meta-explore-editor-editable.meta-rtl * {
+  direction: rtl;
+}
+
+/** controllers on tag */
+.meta-explore-editor-editable td,
+.meta-explore-editor-editable th,
+.meta-explore-editor-editable figure,
+.meta-explore-editor-editable figcaption,
+.meta-explore-editor-editable img,
+.meta-explore-editor-editable iframe,
+.meta-explore-editor-editable video,
+.meta-explore-editor-editable audio {
+  position: relative;
+}
+
+/* float */
+.meta-explore-editor-editable .__meta__float-left {
+  float: left;
+}
+.meta-explore-editor-editable .__meta__float-right {
+  float: right;
+}
+.meta-explore-editor-editable .__meta__float-center {
+  float: center;
+}
+.meta-explore-editor-editable .__meta__float-none {
+  float: none;
+}
+
+/** span */
+.meta-explore-editor-editable span {
+  display: inline;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+/* katex */
+.meta-explore-editor-editable span.katex {
+  display: inline-block;
+}
+.meta-explore-editor-editable span.katex * {
+  direction: ltr;
+}
+
+/* a */
+.meta-explore-editor-editable a {
+  color: #004cff;
+  text-decoration: none;
+}
+.meta-explore-editor-editable span[style~="color:"] a {
+  color: inherit;
+}
+.meta-explore-editor-editable a:hover,
+.meta-explore-editor-editable a:focus {
+  cursor: pointer;
+  color: #0093ff;
+  text-decoration: underline;
+}
+.meta-explore-editor-editable a.on {
+  color: #0093ff;
+  background-color: #e8f7ff;
+}
+
+/* pre */
+.meta-explore-editor-editable pre {
+  display: block;
+  padding: 8px;
+  margin: 0 0 10px;
+  font-family: monospace;
+  color: #666;
+  line-height: 1.45;
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  white-space: pre-wrap !important;
+  word-wrap: break-word;
+  overflow: visible;
+}
+
+/* ol, ul */
+.meta-explore-editor-editable ol {
+  list-style-position: outside;
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.meta-explore-editor-editable ul {
+  list-style-position: outside;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.meta-explore-editor-editable li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin-bottom: 5px;
+}
+/* nested list ol, ul */
+.meta-explore-editor-editable ol ol,
+.meta-explore-editor-editable ol ul,
+.meta-explore-editor-editable ul ol,
+.meta-explore-editor-editable ul ul {
+  margin: 0;
+}
+.meta-explore-editor-editable ol ol,
+.meta-explore-editor-editable ul ol {
+  list-style-type: lower-alpha;
+}
+.meta-explore-editor-editable ol ol ol,
+.meta-explore-editor-editable ul ol ol,
+.meta-explore-editor-editable ul ul ol {
+  list-style-type: upper-roman;
+}
+.meta-explore-editor-editable ul ul,
+.meta-explore-editor-editable ol ul {
+  list-style-type: circle;
+}
+.meta-explore-editor-editable ul ul ul,
+.meta-explore-editor-editable ol ul ul,
+.meta-explore-editor-editable ol ol ul {
+  list-style-type: square;
+}
+
+/* sub, sup */
+.meta-explore-editor-editable sub,
+.meta-explore-editor-editable sup {
+  font-size: 75%;
+  line-height: 0;
+}
+.meta-explore-editor-editable sub {
+  vertical-align: sub;
+}
+.meta-explore-editor-editable sup {
+  vertical-align: super;
+}
+
+/** format style */
+/* p */
+.meta-explore-editor-editable p {
+  display: block;
+  margin: 0 0 10px;
+}
+
+/* div */
+.meta-explore-editor-editable div {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* blockquote */
+.meta-explore-editor-editable blockquote {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  color: #999;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  border-style: solid;
+  border-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-color: #b1b1b1;
+  padding-left: 20px;
+  padding-right: 5px;
+  border-left-width: 5px;
+  border-right-width: 0px;
+}
+.meta-explore-editor-editable blockquote blockquote {
+  border-color: #c1c1c1;
+}
+.meta-explore-editor-editable blockquote blockquote blockquote {
+  border-color: #d1d1d1;
+}
+.meta-explore-editor-editable blockquote blockquote blockquote blockquote {
+  border-color: #e1e1e1;
+}
+/* RTL - blockquote */
+.meta-explore-editor-editable.meta-rtl blockquote {
+  padding-left: 5px;
+  padding-right: 20px;
+  border-left-width: 0px;
+  border-right-width: 5px;
+}
+
+/* h1 */
+.meta-explore-editor-editable h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/* h2 */
+.meta-explore-editor-editable h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/* h3 */
+.meta-explore-editor-editable h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/* h4 */
+.meta-explore-editor-editable h4 {
+  display: block;
+  font-size: 1em;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/* h5 */
+.meta-explore-editor-editable h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/* h6 */
+.meta-explore-editor-editable h6 {
+  display: block;
+  font-size: 0.67em;
+  margin-block-start: 2.33em;
+  margin-block-end: 2.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+/* hr */
+.meta-explore-editor-editable hr {
+  display: flex;
+  border-width: 1px 0 0;
+  border-color: black;
+  border-image: initial;
+  height: 1px;
+}
+.meta-explore-editor-editable hr.__meta__solid {
+  border-style: solid none none;
+}
+.meta-explore-editor-editable hr.__meta__dotted {
+  border-style: dotted none none;
+}
+.meta-explore-editor-editable hr.__meta__dashed {
+  border-style: dashed none none;
+}
+.meta-explore-editor-editable hr.on {
+  border-color: #4592ff;
+  -webkit-box-shadow: 0 0 0 0.1rem #c7deff;
+  box-shadow: 0 0 0 0.1rem #c7deff;
+}
+
+/* table */
+.meta-explore-editor-editable table {
+  display: table;
+  table-layout: auto;
+  border: 1px solid rgb(204, 204, 204);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 10px;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* RTL - table */
+.meta-explore-editor-editable.meta-rtl table {
+  margin: 0 0 10px auto;
+}
+
+.meta-explore-editor-editable table thead {
+  border-bottom: 2px solid #333;
+}
+.meta-explore-editor-editable table tr {
+  border: 1px solid #efefef;
+}
+.meta-explore-editor-editable table th {
+  background-color: #f3f3f3;
+}
+.meta-explore-editor-editable table th,
+.meta-explore-editor-editable table td {
+  border: 1px solid #e1e1e1;
+  padding: 0.4em;
+  background-clip: padding-box;
+}
+/** table style class */
+.meta-explore-editor-editable table.meta-table-size-auto {
+  width: auto !important;
+}
+.meta-explore-editor-editable table.meta-table-size-100 {
+  width: 100% !important;
+}
+.meta-explore-editor-editable table.meta-table-layout-auto {
+  table-layout: auto !important;
+}
+.meta-explore-editor-editable table.meta-table-layout-fixed {
+  table-layout: fixed !important;
+}
+/** table - select class */
+.meta-explore-editor-editable table td.meta-table-selected-cell,
+.meta-explore-editor-editable table th.meta-table-selected-cell {
+  outline: 1px double #4592ff;
+}
+.meta-explore-editor-editable.meta-disabled * {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/** component (image, iframe video) */
+.meta-explore-editor-editable .meta-component {
+  display: flex;
+  padding: 1px;
+  margin: 0 0 10px;
+}
+.meta-explore-editor-editable[contenteditable="true"] .meta-component {
+  outline: 1px dashed #e1e1e1;
+}
+/** component copy effect */
+.meta-explore-editor-editable[contenteditable="true"] .meta-component.meta-component-copy {
+  -webkit-box-shadow: 0 0 0 0.2rem #80bdff;
+  box-shadow: 0 0 0 0.2rem #3f9dff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/** image, video .. */
+.meta-explore-editor-editable img,
+.meta-explore-editor-editable iframe,
+.meta-explore-editor-editable video,
+.meta-explore-editor-editable audio {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+/*  image, video - select index  */
+.meta-explore-editor-editable[contenteditable="true"] figure::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: default;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+}
+.meta-explore-editor-editable[contenteditable="true"] figure a,
+.meta-explore-editor-editable[contenteditable="true"] figure img,
+.meta-explore-editor-editable[contenteditable="true"] figure iframe,
+.meta-explore-editor-editable[contenteditable="true"] figure video {
+  z-index: 0;
+}
+.meta-explore-editor-editable[contenteditable="true"] figure figcaption {
+  display: block;
+  z-index: 2;
+}
+.meta-explore-editor-editable[contenteditable="true"] figure figcaption:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem #c7deff;
+  box-shadow: 0 0 0 0.2rem #c7deff;
+}
+
+/** image, video iframe figure cover */
+.meta-explore-editor-editable .meta-image-container,
+.meta-explore-editor-editable .meta-video-container {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.meta-explore-editor-editable figure {
+  display: block;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+.meta-explore-editor-editable figure figcaption {
+  padding: 1em 0.5em;
+  margin: 0;
+  background-color: #f9f9f9;
+  outline: none;
+}
+.meta-explore-editor-editable figure figcaption p {
+  line-height: 2;
+  margin: 0;
+}
+
+/* image */
+.meta-explore-editor-editable .meta-image-container a img {
+  padding: 1px;
+  margin: 1px;
+  outline: 1px solid #4592ff;
+}
+
+/** video */
+.meta-explore-editor-editable .meta-video-container iframe,
+.meta-explore-editor-editable .meta-video-container video {
+  outline: 1px solid #9e9e9e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.meta-explore-editor-editable .meta-video-container figure {
+  left: 0px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/** audio */
+.meta-explore-editor-editable audio {
+  width: 300px;
+  height: 54px;
+}
+.meta-explore-editor-editable audio.active {
+  outline: 2px solid #80bdff;
+}
+
+/** --- show blocks mode */
+.meta-explore-editor-editable.meta-show-block p,
+.meta-explore-editor-editable.meta-show-block div,
+.meta-explore-editor-editable.meta-show-block h1,
+.meta-explore-editor-editable.meta-show-block h2,
+.meta-explore-editor-editable.meta-show-block h3,
+.meta-explore-editor-editable.meta-show-block h4,
+.meta-explore-editor-editable.meta-show-block h5,
+.meta-explore-editor-editable.meta-show-block h6,
+.meta-explore-editor-editable.meta-show-block li,
+.meta-explore-editor-editable.meta-show-block ol,
+.meta-explore-editor-editable.meta-show-block ul,
+.meta-explore-editor-editable.meta-show-block pre {
+  border: 1px dashed #3f9dff !important;
+  padding: 14px 8px 8px 8px !important;
+}
+.meta-explore-editor-editable.meta-show-block ol,
+.meta-explore-editor-editable.meta-show-block ul {
+  border: 1px dashed #d539ff !important;
+}
+.meta-explore-editor-editable.meta-show-block pre {
+  border: 1px dashed #27c022 !important;
+}
+.meta-show-block p {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPAQMAAAAF7dc0AAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAaSURBVAjXY/j/gwGCPvxg+F4BQiAGDP1HQQByxxw0gqOzIwAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+.meta-show-block div {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAPAQMAAAAxlBYoAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAmSURBVAjXY/j//wcDDH+8XsHwDYi/hwNx1A8w/nYLKH4XoQYJAwCXnSgcl2MOPgAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+.meta-show-block h1 {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPAQMAAAA4f7ZSAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAfSURBVAjXY/j/v4EBhr+9B+LzEPrDeygfhI8j1CBhAEhmJGY4Rf6uAAAAAElFTkSuQmCC")
+    no-repeat;
+}
+.meta-show-block h2 {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPAQMAAAA4f7ZSAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAmSURBVAjXY/j/v4EBhr+dB+LtQPy9geEDEH97D8T3gbgdoQYJAwA51iPuD2haEAAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+.meta-show-block h3 {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPAQMAAAA4f7ZSAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAiSURBVAjXY/j/v4EBhr+dB+LtQPy9geHDeQgN5p9HqEHCADeWI+69VG2MAAAAAElFTkSuQmCC")
+    no-repeat;
+}
+.meta-show-block h4 {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPAQMAAADTSA1RAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAiSURBVAjXY/j//wADDH97DsTXIfjDdiDdDMTfIRhZHRQDAKJOJ6L+K3y7AAAAAElFTkSuQmCC")
+    no-repeat;
+}
+.meta-show-block h5 {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPAQMAAAA4f7ZSAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAlSURBVAjXY/j/v4EBhr+1A/F+IO5vYPiwHUh/B2IQfR6hBgkDABlWIy5uM+9GAAAAAElFTkSuQmCC")
+    no-repeat;
+}
+.meta-show-block h6 {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPAQMAAAA4f7ZSAAAABlBMVEWAgID////n1o2sAAAAAnRSTlP/AOW3MEoAAAAiSURBVAjXY/j/v4EBhr+dB+LtQLy/geFDP5S9HSKOrA6KAR9GIza1ptJnAAAAAElFTkSuQmCC")
+    no-repeat;
+}
+.meta-show-block li {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA7SURBVDhPYxgFcNDQ0PAfykQBIHEYhgoRB/BpwCfHBKWpBkaggYxQGgOgBzyQD1aLLA4TGwWDGjAwAACR3RcEU9Ui+wAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+.meta-show-block ol {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVDhPYxgFcNDQ0PAfhKFcFIBLHCdA1oBNM0kGEmMAPgOZoDTVANUNxAqQvURMECADRiiNAWCagDSGGhyW4DRrMAEGBgAu0SX6WpGgjAAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+.meta-show-block ul {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA1SURBVDhPYxgFDA0NDf+hTBSALI5LDQgwQWmqgVEDKQcsUBoF4ItFGEBXA+QzQpmDGjAwAAA8DQ4Lni6gdAAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+
+/** -- Paragraph styles custom -- */
+/* Bordered */
+.meta-explore-editor-editable .__meta__p-bordered,
+.meta-explore-editor .__meta__p-bordered {
+  border-top: solid 1px #b1b1b1;
+  border-bottom: solid 1px #b1b1b1;
+  padding: 4px 0;
+}
+/* Spaced */
+.meta-explore-editor-editable .__meta__p-spaced,
+.meta-explore-editor .__meta__p-spaced {
+  letter-spacing: 1px;
+}
+/* Neon (https://codepen.io/GeorgePark/pen/MrjbEr) */
+.meta-explore-editor-editable .__meta__p-neon,
+.meta-explore-editor .__meta__p-neon {
+  font-weight: 200;
+  font-style: italic;
+  background: #000;
+  color: #fff;
+  padding: 6px 4px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  text-transform: uppercase;
+  animation: neonFlicker 1.5s infinite alternate;
+}
+@keyframes neonFlicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+      0 0 2px #f40, 0 0 4px #f40, 0 0 6px #f40, 0 0 8px #f40, 0 0 10px #f40;
+    box-shadow: 0 0 0.5px #fff, inset 0 0 0.5px #fff, 0 0 2px #08f,
+      inset 0 0 2px #08f, 0 0 4px #08f, inset 0 0 4px #08f;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+/* -- Text styles custom -- */
+/* Shadow */
+.meta-explore-editor-editable .__meta__t-shadow,
+.meta-explore-editor .__meta__t-shadow {
+  text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+    0 0 0.2rem #999, 0 0 0.4rem #888, 0 0 0.6rem #777, 0 0 0.8rem #666,
+    0 0 1rem #555;
+}
+/* Code */
+.meta-explore-editor-editable .__meta__t-code,
+.meta-explore-editor .__meta__t-code {
+  padding: 0.2em 0.4em;
+}
