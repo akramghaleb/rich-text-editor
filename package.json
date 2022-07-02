@@ -12,7 +12,7 @@
     "server": "npm run start",
     "clean:dist": "rm -rf ./dist/*",
     "build": "cross-env NODE_ENV=production node ./scripts/build.js",
-    "compile": "babel src --out-dir dist/lib",
+    "compile": "rm -rf ./dist/lib/* && babel src --out-dir dist/lib && cpr src/assets/css/editor-contents.css dist/lib/assets/css/editor-contents.css && cpr src/assets/css/editor.css dist/lib/assets/css/editor.css",
     "lint:fix": "eslint src --fix --ext .js,.ts",
     "lint:create": "eslint --init"
   },
@@ -42,6 +42,7 @@
     "babel-loader": "^8.1.0",
     "chalk": "^2.4.2",
     "clean-webpack-plugin": "^3.0.0",
+    "cpr": "^3.0.1",
     "cross-env": "^6.0.3",
     "css-loader": "^5.2.0",
     "css-minimizer-webpack-plugin": "3.0.0",
