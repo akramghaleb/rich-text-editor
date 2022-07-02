@@ -12,7 +12,7 @@
     "server": "npm run start",
     "clean:dist": "rm -rf ./dist/*",
     "build": "cross-env NODE_ENV=production node ./scripts/build.js",
-    "compile": "rm -rf ./dist/lib/* && babel src --out-dir dist/lib && cpr src/assets/css/editor-contents.css dist/lib/assets/css/editor-contents.css && cpr src/assets/css/editor.css dist/lib/assets/css/editor.css",
+    "compile": "rm -rf ./dist/lib/* && babel src --out-dir dist/lib && node ./scripts/compile.js",
     "lint:fix": "eslint src --fix --ext .js,.ts",
     "lint:create": "eslint --init"
   },
