@@ -1,11 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const cpr = require("cpr");
-const ora = require("ora");
 const chalk = require("chalk");
 
 const folderPath = path.resolve("src/");
-const spinner = ora("compiling...");
+
+let finish = false;
 
 /**
  * Copy files
@@ -17,6 +17,7 @@ const copyFiles = (filePath) => {
       console.warn(err, "Error reading folder");
     } else {
       files.forEach(function (filename) {
+        finish = false;
         const filedir = path.join(filePath, filename);
         fs.stat(filedir, function (eror, stats) {
           if (eror) {
@@ -41,15 +42,18 @@ const copyFiles = (filePath) => {
           }
         });
       });
+      finish = true;
     }
   });
 };
 
-spinner.start();
-
 copyFiles(folderPath);
 
-setTimeout(() => {
-  spinner.stop();
-  console.log(chalk.cyan("Compiled successfully.\n"));
-});
+let timer = null;
+
+timer = setInterval(function () {
+  if (finish) {
+    timer && clearTimeout(timer);
+    console.log(chalk.cyan("Compiled successfully.\n"));
+  }
+}, 100);
