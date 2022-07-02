@@ -1,6 +1,6 @@
 ## 1. Include JS/CSS
 ```html
-<link href="https://cdn.jsdelivr.net/npm/explore-editor@latest/dist/css/explore-editor.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/explore-editor@latest/dist/explore-editor.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/explore-editor@latest/dist/explore-editor.min.js"></script>
 ```
 

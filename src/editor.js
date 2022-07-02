@@ -7,9 +7,9 @@
  */
 
 import core from "./lib/core";
-import util from "./lib/util";
 import constructor from "./lib/constructor";
 import context from "./lib/context";
+import util from "./lib/util";
 
 export default {
   /**
