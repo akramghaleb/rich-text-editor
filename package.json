@@ -9,10 +9,8 @@
   "main": "src/editor.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development node ./scripts/server.js",
-    "server": "npm run start",
-    "clean:dist": "rm -rf ./dist/*",
     "build": "cross-env NODE_ENV=production node ./scripts/build.js",
-    "compile": "rm -rf ./dist/lib/* && babel src --out-dir dist/lib && node ./scripts/compile.js",
+    "compile": "rm -rf ./dist/* && npm run build && rm -rf ./lib/* && babel src --out-dir lib && node ./scripts/compile.js",
     "lint:fix": "eslint src --fix --ext .js,.ts",
     "lint:create": "eslint --init"
   },

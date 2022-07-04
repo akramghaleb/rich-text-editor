@@ -32,7 +32,7 @@ const copyFiles = (filePath) => {
               const fileSuffix_ts = filedir.substring(filedir.length - tsSuffix.length);
               if (fileSuffix_css === cssSuffix || fileSuffix_ts === tsSuffix) {
                 const fromPath = filedir;
-                const toPath = filedir.replace(/src/, `dist\\lib`);
+                const toPath = filedir.replace(/src/, "lib");
                 cpr(fromPath, toPath, {});
               }
             }
@@ -46,6 +46,8 @@ const copyFiles = (filePath) => {
     }
   });
 };
+
+console.log(chalk.cyan("\nCompiling...\n"));
 
 copyFiles(folderPath);
 

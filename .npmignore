@@ -4,8 +4,8 @@
 # project files
 .vscode/
 .idea/
-out
-gen
+
+.git/
 
 # modules
 node_modules/
@@ -14,12 +14,19 @@ node_modules/
 #build
 .travis.yml
 build/
-dist/
 
 #dev
-.git/
 test/
 .eslintrc.js
 .eslintignore
+.babelrc
+.gitattributes
+.gitlab-ci.yml
+jsconfig.json
+tsconfig.json
+public/
+scripts/
+src/
+
 package-lock.json
 yarn.lock
