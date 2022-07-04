@@ -10,7 +10,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node ./scripts/server.js",
     "build": "cross-env NODE_ENV=production node ./scripts/build.js",
-    "compile": "rm -rf ./dist/* && npm run build && rm -rf ./lib/* && babel src --out-dir lib && node ./scripts/compile.js",
+    "compile": "rimraf ./dist/* && npm run build && rimraf ./lib/* && babel src --out-dir lib && node ./scripts/compile.js",
     "lint:fix": "eslint src --fix --ext .js,.ts",
     "lint:create": "eslint --init",
     "prepublish": "npm run compile"
