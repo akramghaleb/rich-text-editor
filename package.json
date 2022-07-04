@@ -12,7 +12,8 @@
     "build": "cross-env NODE_ENV=production node ./scripts/build.js",
     "compile": "rm -rf ./dist/* && npm run build && rm -rf ./lib/* && babel src --out-dir lib && node ./scripts/compile.js",
     "lint:fix": "eslint src --fix --ext .js,.ts",
-    "lint:create": "eslint --init"
+    "lint:create": "eslint --init",
+    "prepublish": "npm run compile"
   },
   "author": "meta-explore",
   "keywords": [
