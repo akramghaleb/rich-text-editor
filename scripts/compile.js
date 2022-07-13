@@ -47,8 +47,6 @@ const copyFiles = (filePath) => {
   });
 };
 
-console.log(chalk.cyan("\nCompiling...\n"));
-
 copyFiles(folderPath);
 
 let timer = null;
@@ -56,6 +54,6 @@ let timer = null;
 timer = setInterval(function () {
   if (finish) {
     timer && clearTimeout(timer);
-    console.log(chalk.cyan("Compiled successfully.\n"));
+    console.log("\n🎁", chalk.cyan("ExploreEditor compiled successfully.\n"));
   }
 }, 100);

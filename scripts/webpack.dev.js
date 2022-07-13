@@ -2,7 +2,9 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const path = require("path");
 const config = require("./webpack.config");
-const { multEntry, devOutputName, bundleSuffix, port } = require("./setting");
+const { multEntry, devOutputName, bundleSuffix, port, packInfo } = require("./utils");
+
+packInfo();
 
 module.exports = merge(config, {
   mode: "development",
@@ -30,6 +32,5 @@ module.exports = merge(config, {
     new webpack.DefinePlugin({
       "env.PRODUCTION": "false",
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
 });

@@ -6,7 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require("path");
 const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
-const { multEntry, prodOutputName, bundleSuffix } = require("./setting");
+const { multEntry, prodOutputName, bundleSuffix } = require("./utils");
 const config = require("./webpack.config");
 
 module.exports = merge(config, {

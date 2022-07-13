@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const webpackConfig = require("./webpack.prod");
 const ora = require("ora");
 const chalk = require("chalk");
+const parseArgs = require("minimist");
 
 const spinner = ora("building...");
 spinner.start();
@@ -26,5 +27,8 @@ webpack(webpackConfig, (err, stats) => {
     process.exit(1);
   }
 
-  console.log(chalk.cyan("Build successfully.\n"));
+  const argv = parseArgs(process.argv.slice(2));
+  if (!(argv && argv.u === "compile")) {
+    console.log("🎉", chalk.cyan("Build successfully.\n"));
+  }
 });

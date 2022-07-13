@@ -1,7 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { multEntry, devOutputName, prodOutputName, bundleSuffix } = require("./setting");
+const { multEntry, devOutputName, prodOutputName, bundleSuffix } = require("./utils");
 const developmentEnv = process.env.NODE_ENV !== "production";
 
 module.exports = {
